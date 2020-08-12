@@ -17,6 +17,12 @@ interface IProps {
 const Section: React.FC<IProps> = ({ variant, title, description }) => {
   const buttonVariant = Math.round(Math.random());
 
+  function handleToggle(): void {
+    if (window.toggleActiveMenu) {
+      window.toggleActiveMenu();
+    }
+  }
+
   return (
     <Container className={variant}>
       <HeaderWrapper>
@@ -25,7 +31,7 @@ const Section: React.FC<IProps> = ({ variant, title, description }) => {
             <DropboxLogo />
             <span>Dropbox</span>
           </h1>
-          <button type="button">
+          <button type="button" onClick={handleToggle}>
             {buttonVariant === 0 ? 'Acessar' : 'Interagir'}
           </button>
         </Header>
