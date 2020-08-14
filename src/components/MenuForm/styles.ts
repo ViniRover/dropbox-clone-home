@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FaDropbox } from 'react-icons/fa';
+import { FcGoogle } from 'react-icons/fc';
 
 export const Container = styled.div`
   display: flex;
@@ -74,6 +75,17 @@ export const Form = styled.form`
   > .subtitle {
     font-size: 12px;
     margin-top: 3px;
+    margin-bottom: 10px;
+
+    > a {
+      text-decoration: none;
+      color: var(--color-blue);
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   > input {
@@ -84,7 +96,7 @@ export const Form = styled.form`
     margin-top: 18px;
   }
 
-  > button {
+  > .register {
     margin-top: 18px;
     padding: 13px 18px;
     font-size: 16px;
@@ -104,4 +116,25 @@ export const Form = styled.form`
     opacity: 0.6;
     margin-top: 4px;
   }
+`;
+
+export const GoogleButton = styled.button`
+  display: flex;
+  align-items: center;
+  height: 44px;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 13px 18px;
+  font-size: 16px;
+  background-color: #fff;
+  color: var(--color-quaternary);
+  border: 1px solid #d0d0d3;
+
+  cursor: pointer;
+`;
+
+export const GoogleIcon = styled(FcGoogle)`
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 `;
