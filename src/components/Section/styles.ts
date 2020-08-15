@@ -65,7 +65,7 @@ export const Header = styled.header`
 
   > h1 {
     display: flex;
-    align-items: center;
+
     > span {
       color: var(--text-color);
       margin-left: 10px;
